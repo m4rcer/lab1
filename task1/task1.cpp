@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <math.h>
+#include <cstdio>
 
 using namespace std;
 
@@ -74,9 +75,9 @@ int* bubbleSort(int arr[], size_t N) {
 void printArray(int arr[], size_t N) {
     for (size_t i = 0; i < N; ++i)
     {
-        cout << arr[i] << " ";
+        printf("%d ", arr[i]);
     }
-    cout << endl;
+    printf("\n");
 }
 
 int main()
@@ -88,14 +89,15 @@ int main()
     initializeArray(arr, N);
 
     int* resultArray = processArray(arr, N);
-    cout << "Заполненный массив:" << endl;
+    printf("Заполненный массив:\n");
     printArray(resultArray, N);
 
 
     int* sortedArray = bubbleSort(resultArray, N);
-    cout << "Отсортированный массив:" << endl;
+    printf("Отсортированный массив:\n");
     printArray(sortedArray, N);
 
-    cout << "cnt = " << countOfNumbersContainingDigit(sortedArray, N) << endl;
+    int cnt = countOfNumbersContainingDigit(sortedArray, N);
+    printf("cnt = %d", cnt);
 }
 

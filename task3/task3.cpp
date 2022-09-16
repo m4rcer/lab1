@@ -19,12 +19,12 @@ int main()
     char dest[num+1];
     setlocale(LC_ALL, "Russian");
 
-    cout << "Стандартная функция strncpy:" << endl;
+    printf("Стандартная функция strncpy: ");
     char* result = strncpy(dest, src, num);
     result[num] = '\0';
     cout << result << endl;
 
-    cout << "Собственная функция myStrncpy:" << endl;
+    printf("Собственная функция myStrncpy: ");
     char* myResult = myStrncpy(dest, src, num);
     myResult[num] = '\0';
     cout << myResult << endl;
